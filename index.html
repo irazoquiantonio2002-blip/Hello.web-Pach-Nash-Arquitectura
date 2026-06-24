@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Principal -->
+    <title>Pach&Nash Arquitectura | Diseño Arquitectónico e Interiorismo Premium</title>
+    <meta name="description" content="Estudio de arquitectura e interiorismo de alto nivel. Diseñamos espacios residenciales y comerciales que transforman tu manera de vivir. Cotiza tu proyecto hoy.">
+    <meta name="keywords" content="arquitectura, interiorismo, diseño de interiores, remodelaciones, despacho de arquitectura, diseño residencial, diseño comercial, Pach Nash Arquitectura">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Pach&Nash Arquitectura">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pach&Nash Arquitectura | Diseño e Interiorismo Premium">
+    <meta property="og:description" content="Transformamos espacios en experiencias. Arquitectura residencial, interiorismo y remodelaciones de alto nivel.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Tipografías Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+    <!-- ============================================================
+         LOADER PREMIUM — ARQUITECTÓNICO
+    ============================================================ -->
+    <div id="site-loader" class="site-loader">
+        <div class="loader-inner">
+            <!-- SVG arquitectónico: líneas que se dibujan -->
+            <svg class="loader-svg" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="loader-path" d="M10 50 L10 20 L30 10 L50 20 L50 50" stroke="#C8A96E" stroke-width="1.5" fill="none"/>
+                <path class="loader-path" d="M30 10 L30 50" stroke="#C8A96E" stroke-width="1.5" fill="none"/>
+                <path class="loader-path" d="M5 50 L55 50" stroke="#C8A96E" stroke-width="1.5" fill="none"/>
+            </svg>
+            <div class="loader-wordmark">
+                <span class="loader-brand">Pach<span>&</span>Nash</span>
+                <span class="loader-sub">Arquitectura</span>
+            </div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+            <span class="loader-pct" id="loaderPct">0%</span>
+        </div>
+        <!-- Cortinas de salida -->
+        <div class="loader-curtain curtain-top"></div>
+        <div class="loader-curtain curtain-bottom"></div>
+    </div>
+
+    <!-- ============================================================
+         BOTÓN FLOTANTE WHATSAPP
+    ============================================================ -->
+    <a href="https://wa.me/5219512504438?text=Hola,%20me%20interesa%20cotizar%20un%20proyecto%20con%20Pach%26Nash%20Arquitectura"
+       class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Escríbenos!</span>
+    </a>
+
+    <!-- ============================================================
+         HEADER / NAVBAR
+    ============================================================ -->
+    <header id="header">
+        <div class="container navbar">
+            <a href="#inicio" class="logo">
+                <span class="logo-main">Pach<span class="logo-amp">&</span>Nash</span>
+                <span class="logo-sub">Arquitectura</span>
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+            <label for="menu-toggle" class="menu-btn" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </label>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proceso">Metodología</a></li>
+                    <li><a href="#portafolio">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li>
+                        <a href="https://wa.me/5219512504438" class="btn btn-nav" target="_blank">
+                            Cotizar Proyecto
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             HERO SECTION — BIG TECH LEVEL
+        ============================================================ -->
+        <section id="inicio" class="hero" id="heroSection">
+
+            <!-- Canvas para partículas flotantes -->
+            <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+            <!-- Imagen de fondo con agua premium (parallax layer) -->
+            <div class="hero-bg" id="heroBg"></div>
+
+            <!-- Overlay multicapa con gradiente animado -->
+            <div class="hero-overlay"></div>
+            <div class="hero-gradient-anim" id="heroGradAnim"></div>
+
+            <!-- Orbes de luz decorativos -->
+            <div class="orb orb-1" id="orb1"></div>
+            <div class="orb orb-2" id="orb2"></div>
+            <div class="orb orb-3" id="orb3"></div>
+
+            <!-- Líneas arquitectónicas decorativas -->
+            <svg class="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+                <line class="h-line h-line-1" x1="0" y1="200" x2="400" y2="200"/>
+                <line class="h-line h-line-2" x1="1040" y1="650" x2="1440" y2="650"/>
+                <line class="h-line h-line-3" x1="120" y1="0" x2="120" y2="300"/>
+                <line class="h-line h-line-4" x1="1320" y1="600" x2="1320" y2="900"/>
+                <!-- Cruz de acento -->
+                <line class="h-cross cx1" x1="85" y1="160" x2="155" y2="160"/>
+                <line class="h-cross cx2" x1="120" y1="125" x2="120" y2="195"/>
+                <line class="h-cross cx3" x1="1285" y1="640" x2="1355" y2="640"/>
+                <line class="h-cross cx4" x1="1320" y1="605" x2="1320" y2="675"/>
+            </svg>
+
+            <div class="container hero-container">
+
+                <!-- Badge izquierdo — tilt con mouse -->
+                <div class="hero-badge badge-left" id="badge1">
+                    <div class="badge-glow"></div>
+                    <div class="badge-icon"><i class="fas fa-medal"></i></div>
+                    <div class="badge-text">
+                        <span class="badge-num">+10</span>
+                        <span class="badge-label">Años de experiencia</span>
+                    </div>
+                </div>
+
+                <!-- Badge derecho -->
+                <div class="hero-badge badge-right" id="badge2">
+                    <div class="badge-glow"></div>
+                    <div class="badge-icon"><i class="fas fa-home"></i></div>
+                    <div class="badge-text">
+                        <span class="badge-num">+120</span>
+                        <span class="badge-label">Proyectos entregados</span>
+                    </div>
+                </div>
+
+                <!-- Badge inferior — rating -->
+                <div class="hero-badge badge-bottom" id="badge3">
+                    <div class="badge-glow"></div>
+                    <div class="badge-icon badge-icon-star"><i class="fas fa-star"></i></div>
+                    <div class="badge-text">
+                        <span class="badge-num">4.9</span>
+                        <span class="badge-label">Calificación de clientes</span>
+                    </div>
+                </div>
+
+                <!-- ---- CONTENIDO PRINCIPAL ---- -->
+                <div class="hero-content" id="heroContent">
+
+                    <!-- Eyebrow con líneas animadas -->
+                    <div class="hero-eyebrow" id="heroEyebrow">
+                        <span class="eyebrow-line el-left"></span>
+                        <span class="eyebrow-text">Despacho de Arquitectura e Interiorismo</span>
+                        <span class="eyebrow-line el-right"></span>
+                    </div>
+
+                    <!-- Título con reveal por palabras -->
+                    <h1 class="hero-title" id="heroTitle" aria-label="Espacios que inspiran tu forma de vivir.">
+                        <span class="title-line tl-1">
+                            <span class="word-wrap"><span class="word">Espacios</span></span>
+                            <span class="word-wrap"><span class="word">que</span></span>
+                            <span class="word-wrap"><span class="word">inspiran</span></span>
+                        </span>
+                        <span class="title-line tl-2">
+                            <span class="word-wrap italic-wrap"><em class="word">tu forma de vivir.</em></span>
+                        </span>
+                    </h1>
+
+                    <!-- Línea decorativa dorada -->
+                    <div class="hero-divider" id="heroDivider">
+                        <span class="divider-line"></span>
+                        <span class="divider-diamond"></span>
+                        <span class="divider-line"></span>
+                    </div>
+
+                    <p class="hero-desc" id="heroDesc">
+                        Arquitectura residencial, interiorismo comercial y remodelaciones de alto nivel.
+                        Convertimos tus ideas en realidades tangibles, estéticas y atemporales.
+                    </p>
+
+                    <div class="hero-buttons" id="heroButtons">
+                        <a href="https://wa.me/5219512504438?text=Hola%2C%20me%20gustar%C3%ADa%20conocer%20sus%20proyectos%20y%20servicios%20de%20Pach%26Nash%20Arquitectura." class="btn btn-primary btn-shimmer" id="heroCta1" target="_blank" rel="noopener">
+                            <span class="btn-shimmer-effect"></span>
+                            <i class="fab fa-whatsapp" style="font-size:1.1rem;"></i>
+                            <span class="btn-text">Ver Proyectos</span>
+                        </a>
+                        <a href="https://wa.me/5219512504438?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20con%20Pach%26Nash%20Arquitectura.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-glass btn-magnetic" id="heroCta2" target="_blank" rel="noopener">
+                            <span class="btn-text">Cotizar mi Proyecto</span>
+                            <span class="btn-dot"></span>
+                        </a>
+                    </div>
+
+                    <!-- Scroll indicator -->
+                    <div class="scroll-indicator" id="scrollIndicator">
+                        <div class="scroll-mouse">
+                            <span class="scroll-wheel"></span>
+                        </div>
+                        <span class="scroll-text">Descubre más</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Barra inferior de stats -->
+            <div class="hero-stats-bar" id="heroStatsBar">
+                <div class="stat-item">
+                    <span class="stat-num">+120</span>
+                    <span class="stat-label">Proyectos</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat-item">
+                    <span class="stat-num">+10</span>
+                    <span class="stat-label">Años</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat-item">
+                    <span class="stat-num">98%</span>
+                    <span class="stat-label">Satisfacción</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat-item">
+                    <span class="stat-num">4.9★</span>
+                    <span class="stat-label">Calificación</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECCIÓN BENEFICIOS
+        ============================================================ -->
+        <section class="benefits" id="beneficios">
+            <div class="container">
+                <div class="section-header animate-section">
+                    <span class="section-label">¿Por qué elegirnos?</span>
+                    <h2>Arquitectura con alma,<br>diseño con propósito.</h2>
+                    <p>No solo construimos espacios. Diseñamos experiencias que se adaptan a tu estilo de vida, presupuesto y visión.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-card" data-delay="0">
+                        <div class="benefit-num">01</div>
+                        <div class="benefit-icon-wrap">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Diseño Personalizado</h3>
+                        <p>Cada proyecto nace de una escucha profunda. Tu visión es el punto de partida de todo lo que creamos.</p>
+                        <div class="benefit-hover-line"></div>
+                    </div>
+                    <div class="benefit-card animate-card" data-delay="100">
+                        <div class="benefit-num">02</div>
+                        <div class="benefit-icon-wrap">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Gestión Integral</h3>
+                        <p>Desde los primeros bocetos hasta la entrega de llaves. Nos encargamos de todo para tu tranquilidad total.</p>
+                        <div class="benefit-hover-line"></div>
+                    </div>
+                    <div class="benefit-card animate-card" data-delay="200">
+                        <div class="benefit-num">03</div>
+                        <div class="benefit-icon-wrap">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Calidad Premium</h3>
+                        <p>Trabajamos con los mejores materiales y proveedores para garantizar acabados de nivel internacional.</p>
+                        <div class="benefit-hover-line"></div>
+                    </div>
+                    <div class="benefit-card animate-card" data-delay="300">
+                        <div class="benefit-num">04</div>
+                        <div class="benefit-icon-wrap">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Tiempos Respetados</h3>
+                        <p>Cumplimos con cada etapa según el calendario acordado. Tu tiempo es valioso y lo tratamos como tal.</p>
+                        <div class="benefit-hover-line"></div>
+                    </div>
+                    <div class="benefit-card animate-card" data-delay="400">
+                        <div class="benefit-num">05</div>
+                        <div class="benefit-icon-wrap">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Renders 3D Fotorrealistas</h3>
+                        <p>Visualiza tu proyecto antes de construirlo. Presentamos renders de alta calidad para que apruebes cada detalle.</p>
+                        <div class="benefit-hover-line"></div>
+                    </div>
+                    <div class="benefit-card animate-card" data-delay="500">
+                        <div class="benefit-num">06</div>
+                        <div class="benefit-icon-wrap">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Garantía de Obra</h3>
+                        <p>Respaldamos nuestro trabajo con garantías reales. Construimos para durar y estamos contigo después de la entrega.</p>
+                        <div class="benefit-hover-line"></div>
+                    </div>
+                </div>
+
+                <!-- Métricas de impacto -->
+                <div class="metrics-strip animate-section">
+                    <div class="metric-item">
+                        <span class="metric-num" data-target="120">0</span><span class="metric-unit">+</span>
+                        <span class="metric-label">Proyectos Completados</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-num" data-target="10">0</span><span class="metric-unit">+</span>
+                        <span class="metric-label">Años de Trayectoria</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-num" data-target="98">0</span><span class="metric-unit">%</span>
+                        <span class="metric-label">Clientes Satisfechos</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-num" data-target="15">0</span><span class="metric-unit">+</span>
+                        <span class="metric-label">Premios de Diseño</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECCIÓN SERVICIOS
+        ============================================================ -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <div class="section-header animate-section">
+                    <span class="section-label">Nuestras especialidades</span>
+                    <h2>Soluciones completas<br>para cada espacio.</h2>
+                    <p>Un estudio con capacidad completa: arquitectura, interiorismo, remodelaciones y supervisión de obra.</p>
+                </div>
+            </div>
+
+            <div class="services-showcase">
+                <div class="service-item animate-card" data-delay="0">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Arquitectura Residencial Pach&Nash" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-info">
+                        <span class="service-num">01</span>
+                        <h3>Arquitectura</h3>
+                        <p>Proyectos residenciales y comerciales desde el concepto hasta la estructura. Planos, fachadas y coordinación técnica completa.</p>
+                        <div class="service-tags">
+                            <span>Residencial</span>
+                            <span>Comercial</span>
+                            <span>Corporativo</span>
+                        </div>
+                        <a href="https://wa.me/5219512504438?text=Hola%2C%20me%20interesa%20cotizar%20un%20servicio%20de%20Pach%26Nash%20Arquitectura." class="service-cta" target="_blank" rel="noopener">Cotizar <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-item service-item-reverse animate-card" data-delay="150">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" alt="Diseño de Interiores Pach&Nash" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-info">
+                        <span class="service-num">02</span>
+                        <h3>Interiorismo</h3>
+                        <p>Selección de mobiliario, paletas de color, iluminación y acabados. Creamos ambientes que equilibran estética y funcionalidad.</p>
+                        <div class="service-tags">
+                            <span>Hogares</span>
+                            <span>Restaurantes</span>
+                            <span>Oficinas</span>
+                        </div>
+                        <a href="https://wa.me/5219512504438?text=Hola%2C%20me%20interesa%20cotizar%20un%20servicio%20de%20Pach%26Nash%20Arquitectura." class="service-cta" target="_blank" rel="noopener">Cotizar <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-item animate-card" data-delay="300">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800&auto=format&fit=crop" alt="Remodelaciones Pach&Nash" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-info">
+                        <span class="service-num">03</span>
+                        <h3>Remodelaciones</h3>
+                        <p>Transformación total o parcial de espacios existentes. Actualizamos la estética, funcionalidad y valor de tu propiedad.</p>
+                        <div class="service-tags">
+                            <span>Cocinas</span>
+                            <span>Baños</span>
+                            <span>Fachadas</span>
+                        </div>
+                        <a href="https://wa.me/5219512504438?text=Hola%2C%20me%20interesa%20cotizar%20un%20servicio%20de%20Pach%26Nash%20Arquitectura." class="service-cta" target="_blank" rel="noopener">Cotizar <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECCIÓN VISUAL DESTACADA
+        ============================================================ -->
+        <section class="highlight animate-section">
+            <div class="highlight-bg"></div>
+            <div class="highlight-overlay"></div>
+            <div class="container highlight-content">
+                <div class="highlight-deco">
+                    <span class="deco-circle c1"></span>
+                    <span class="deco-circle c2"></span>
+                </div>
+                <div class="highlight-quote">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <blockquote>
+                        "La arquitectura es el juego sabio, correcto y magnífico de los volúmenes bajo la luz."
+                    </blockquote>
+                    <cite>— Le Corbusier · Inspiración Pach&Nash</cite>
+                </div>
+                <div class="highlight-pillars">
+                    <div class="pillar">
+                        <i class="fas fa-eye"></i>
+                        <span>Visión</span>
+                    </div>
+                    <div class="pillar">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <span>Precisión</span>
+                    </div>
+                    <div class="pillar">
+                        <i class="fas fa-gem"></i>
+                        <span>Excelencia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECCIÓN PROCESO
+        ============================================================ -->
+        <section id="proceso" class="process">
+            <div class="container">
+                <div class="section-header animate-section">
+                    <span class="section-label">Nuestra metodología</span>
+                    <h2>Cada proyecto sigue<br>un proceso probado.</h2>
+                    <p>Un flujo claro y transparente que garantiza resultados de excelencia en cada etapa.</p>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="process-line"></div>
+
+                    <div class="process-step animate-card" data-delay="0">
+                        <div class="step-connector"></div>
+                        <div class="step-dot">
+                            <span>01</span>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon"><i class="fas fa-comments"></i></div>
+                            <h3>Consulta Inicial</h3>
+                            <p>Nos reunimos para escuchar tu visión, explorar el espacio y entender tus necesidades, expectativas y presupuesto.</p>
+                            <span class="step-tag">Gratis</span>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-card" data-delay="150">
+                        <div class="step-connector"></div>
+                        <div class="step-dot">
+                            <span>02</span>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon"><i class="fas fa-pencil-alt"></i></div>
+                            <h3>Diseño y Propuesta</h3>
+                            <p>Desarrollamos planos, renders 3D fotorrealistas y un presupuesto detallado para que visualices y apruebes cada decisión.</p>
+                            <span class="step-tag">Renders incluidos</span>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-card" data-delay="300">
+                        <div class="step-connector"></div>
+                        <div class="step-dot">
+                            <span>03</span>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon"><i class="fas fa-hard-hat"></i></div>
+                            <h3>Ejecución de Obra</h3>
+                            <p>Supervisamos la construcción o remodelación con rigor técnico, asegurando la calidad y el avance según el calendario.</p>
+                            <span class="step-tag">Supervisión permanente</span>
+                        </div>
+                    </div>
+
+                    <div class="process-step animate-card" data-delay="450">
+                        <div class="step-connector"></div>
+                        <div class="step-dot">
+                            <span>04</span>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon"><i class="fas fa-key"></i></div>
+                            <h3>Entrega Final</h3>
+                            <p>Te entregamos tu nuevo espacio con recorrido guiado, documentación completa y garantía de obra por escrito.</p>
+                            <span class="step-tag">Con garantía</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PORTAFOLIO / GALERÍA
+        ============================================================ -->
+        <section id="portafolio" class="portfolio">
+            <div class="container">
+                <div class="section-header animate-section">
+                    <span class="section-label">Proyectos destacados</span>
+                    <h2>Obras que hablan<br>por sí solas.</h2>
+                    <p>Una selección de nuestros trabajos más recientes. Cada uno, una historia de transformación.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item gallery-large animate-card" data-delay="0">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=900&auto=format&fit=crop" alt="Casa Minimalista Pach&Nash" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-cat">Arquitectura Residencial</span>
+                                <h4>Casa Minimalista Bosque</h4>
+                                <p>Diseño completo, obra y entrega — 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item animate-card" data-delay="100">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=700&auto=format&fit=crop" alt="Loft Urbano Pach&Nash" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-cat">Interiorismo</span>
+                                <h4>Loft Urbano Nórdico</h4>
+                                <p>Interiorismo completo — 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item animate-card" data-delay="200">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd64bd40?q=80&w=700&auto=format&fit=crop" alt="Cocina Premium Pach&Nash" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-cat">Remodelación</span>
+                                <h4>Cocina Varm Premium</h4>
+                                <p>Remodelación integral — 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item animate-card" data-delay="150">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=700&auto=format&fit=crop" alt="Oficinas Tech Pach&Nash" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-cat">Interiorismo Comercial</span>
+                                <h4>Oficinas Tech District</h4>
+                                <p>Diseño y obra — 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item animate-card" data-delay="250">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=700&auto=format&fit=crop" alt="Casa Contemporánea Pach&Nash" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-cat">Arquitectura</span>
+                                <h4>Residencia Contemporánea</h4>
+                                <p>Proyecto completo — 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-cta animate-section">
+                    <a href="https://wa.me/5219512504438?text=Hola%2C%20vi%20sus%20proyectos%20y%20me%20gustar%C3%ADa%20algo%20as%C3%AD%20para%20mi%20espacio.%20%C2%BFPodemos%20hablar%3F" class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" style="font-size:1.1rem;"></i>
+                        <span>Quiero un proyecto así</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECCIÓN CONTACTO
+        ============================================================ -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-header animate-section">
+                    <span class="section-label">Empieza tu proyecto</span>
+                    <h2>Hablemos de tu<br>próximo espacio.</h2>
+                    <p>Primera consulta sin costo. Cuéntanos tu proyecto y te preparamos una propuesta personalizada.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Formulario -->
+                    <div class="contact-form-wrap animate-card" data-delay="0">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre completo *</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono *</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="+52 1 951 250 4438" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo">Tipo de proyecto</label>
+                                <select id="tipo" name="tipo">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="arquitectura">Arquitectura residencial</option>
+                                    <option value="comercial">Arquitectura comercial</option>
+                                    <option value="interiorismo">Diseño de interiores</option>
+                                    <option value="remodelacion">Remodelación</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Cuéntanos tu proyecto *</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente tu idea, espacio, metros cuadrados aproximados y cualquier detalle relevante..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full" id="formSubmitBtn">
+                                <i class="fab fa-whatsapp" style="font-size:1.1rem;"></i>
+                                <span>Enviar por WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Info de contacto + Mapa -->
+                    <div class="contact-info animate-card" data-delay="200">
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="detail-text">
+                                    <h4>Ubicación</h4>
+                                    <p>Ciudad de México, México</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fab fa-whatsapp"></i></div>
+                                <div class="detail-text">
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.me/5219512504438" target="_blank">+52 1 951 250 4438</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="detail-text">
+                                    <h4>Correo</h4>
+                                    <a href="mailto:hola@pachnash.com">hola@pachnash.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fas fa-clock"></i></div>
+                                <div class="detail-text">
+                                    <h4>Horario de atención</h4>
+                                    <p>Lunes a Viernes, 9:00 – 18:00 hrs</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mapa Google Maps -->
+                        <div class="map-wrap">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60316.29785949!2d-99.20904!3d19.42847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1700000000000"
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación Pach&Nash Arquitectura">
+                            </iframe>
+                        </div>
+
+                        <!-- Redes sociales -->
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Houzz">
+                                <i class="fab fa-houzz"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Pinterest">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="#inicio" class="footer-logo">
+                        Pach<span>&</span>Nash<br>
+                        <small>Arquitectura</small>
+                    </a>
+                    <p>Estudio de Arquitectura e Interiorismo dedicado a crear espacios estéticos, funcionales y atemporales que elevan la calidad de vida.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Houzz"><i class="fab fa-houzz"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Arquitectura Residencial</a></li>
+                        <li><a href="#servicios">Arquitectura Comercial</a></li>
+                        <li><a href="#servicios">Diseño de Interiores</a></li>
+                        <li><a href="#servicios">Remodelaciones</a></li>
+                        <li><a href="#servicios">Supervisión de Obra</a></li>
+                        <li><a href="#servicios">Renders 3D</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#beneficios">¿Por qué Pach&Nash?</a></li>
+                        <li><a href="#proceso">Metodología</a></li>
+                        <li><a href="#portafolio">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5219512504438">+52 1 951 250 4438</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:hola@pachnash.com">hola@pachnash.com</a></p>
+                    <p><i class="fas fa-clock"></i> Lun–Vie, 9:00–18:00 hrs</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pach&Nash Arquitectura. Todos los derechos reservados.</p>
+                <p>Diseño con <i class="fas fa-heart" style="color: var(--accent-color);"></i> para cada espacio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
